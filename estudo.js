@@ -41,3 +41,13 @@ let ju = document.getElementById("juros").value;
 let resultado = (val * ( ju/100) ) +val 
 document.write("0 resultado é "+ resultado);
 }
+// divisao é/
+//multiplicacao é*
+function soma (){
+ let v1 = document.getElementById("v1").value
+ let v1 = document.getElementById("v2").value
+let r = (Number (v1) + nunber (v2) );
+document.getElementById("resultado").innerHTML
+}
+
+
