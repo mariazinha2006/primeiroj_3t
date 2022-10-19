@@ -38,6 +38,23 @@ function quadrado(){
 function total (){  
 let val = document.getElementById ("valor").value;
 let ju = document.getElementById("juros").value;
+
+if(!nunber(val)){
+alert("0 valor deve ser o numero.");
+document.getElementById("valor").value = "";
+document.getElementById("valor").focus();
+return
+}
+if(!nunber(ju)){
+   alert("0 valor deve ser o numero.");
+   document.getElementById("juros").value = "";
+   document.getElementById("juros").focus();
+   return
+   }
+
+
+
+
 let resultado = (val * ( ju/100) ) +val 
 document.write("0 resultado é "+ resultado);
 }
@@ -49,5 +66,6 @@ function soma (){
 let r = (Number (v1) + nunber (v2) );
 document.getElementById("resultado").innerHTML
 }
+
 
 
