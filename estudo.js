@@ -1,3 +1,4 @@
+
 // console.log("Console: Alô Mundo...");
 // alert("Alerta: Alô mundo...");
 let tabuada = 4;
@@ -35,37 +36,44 @@ function quadrado(){
    }
 }
 
-function total (){  
-let val = document.getElementById ("valor").value;
-let ju = document.getElementById("juros").value;
-
-if(!nunber(val)){
-alert("0 valor deve ser o numero.");
-document.getElementById("valor").value = "";
-document.getElementById("valor").focus();
-return
+function moeda(atual){
+   return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
-if(!nunber(ju)){
-   alert("0 valor deve ser o numero.");
-   document.getElementById("juros").value = "";
-   document.getElementById("juros").focus();
-   return
+
+function total(){
+   let val = document.getElementById("valor").value;
+   let ju = document.getElementById("juros").value;
+   let t = document.getElementById("meses").value;
+
+   if(!Number(val)){
+      alert("O valor deve ser um número.");
+      document.getElementById("valor").value = "";
+      document.getElementById("valor").focus();
+      return 
    }
-
-
-
-
-let resultado = (val * ( ju/100) ) +val 
-document.write("0 resultado é "+ resultado);
+   if(!Number(ju)){
+      alert("O valor dos juros deve ser um número.");
+      document.getElementById("juros").value = "";
+      document.getElementById("juros").focus();
+      return 
+   }
+   if(!Number(t)){
+      alert("A quantidade de meses deve ser um número.");
+      document.getElementById("meses").value = "";
+      document.getElementById("meses").focus();
+      return 
+   }
+   let r = val;
+   for(let m = 1; m <= t; m++){
+      r = (val * (1+ (ju/100)));
+      val = r;
+      //document.write("Mês " + m + " valor: " + moeda(r) + "<br>");
+   }
+   
+   document.getElementById("total").innerHTML= "total:"+moeda(r);
+  // document.write("O total é " + moeda(r));
 }
-// divisao é/
-//multiplicacao é*
-function soma (){
- let v1 = document.getElementById("v1").value
- let v1 = document.getElementById("v2").value
-let r = (Number (v1) + nunber (v2) );
-document.getElementById("resultado").innerHTML
-}
+
 
 
 
