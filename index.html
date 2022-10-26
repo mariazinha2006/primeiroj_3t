@@ -8,20 +8,16 @@
     <link rel="stylesheet" href="geral.css">
     <script src="estudo.js"></script>
 </head>
-<body> 
-    valor:<input id="valor"type="text"> <br>
-    <button onclick="total()"> Enviar</button>
-    juros: <input id="juros"type="text"> <br>
-    <button onclick= "total()"> ok</button>
-
-    <br><br><br><br>
-     <span id="resultado"></span><br>
-    valor 1 <input id="v1" type="text"><br>
-    valor 2 <input id="v2" type="text"><br>
-    <button onclick="soma()"> + </button>
-    <button onclick="subtraçao()"> - </button>
-    <button onclick="multiplicaçao()"> * </button>
-    <button onclick="divisao()"> / </button>
+<body>
+    <div class="calculadora">
+<span id="total">total: 0,00</span> <br>
+ Capital: <input id="valor" type="text"> <br>
+ Juros (mensais): <input id="juros" type="text"> <br>
+ Nr. Meses: <input id="meses" type="text"> <br>
+ <button onclick="total()"> OK </button>
+</div>
 </body>
+
 </html>
+
 
